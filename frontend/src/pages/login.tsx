@@ -44,7 +44,7 @@ export default function Login() {
         } 
         else if (response.status === 401) {
         Swal.fire({
-            title: "Credenciais ausentes!",
+            title: "Credenciais Ausentes!",
             text: "Você precisa informar usuário e senha para continuar.",
             icon: "warning",
             iconColor: "#e08e28",
