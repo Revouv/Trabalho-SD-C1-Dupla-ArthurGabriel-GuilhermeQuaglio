@@ -44,7 +44,7 @@ export default function Login() {
         } 
         else if (response.status === 401) {
         Swal.fire({
-            title: "Credenciais ausentes!",
+            title: "Credenciais Ausentes!",
             text: "Você precisa informar usuário e senha para continuar.",
             icon: "warning",
             iconColor: "#e08e28",
@@ -128,7 +128,7 @@ export default function Login() {
                     cursor: usuario.trim() === "" || senha.trim() === "" ? "not-allowed" : "pointer",
                     opacity: usuario.trim() === "" || senha.trim() === "" ? 0.6 : 0.9,
                 }}
-                disabled={usuario.trim() === "" || senha.trim() === ""}
+                
                 onClick={handleLogin}
             >
                 Entrar
