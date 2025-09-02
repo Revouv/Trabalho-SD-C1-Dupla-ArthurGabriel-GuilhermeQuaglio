@@ -15,21 +15,21 @@ const usuarios = [
 app.post("/login", (req, res) => {
   const { usuario, senha } = req.body;
 
-  // Se não mandou usuário ou senha → erro 401 (requisição inválida)
+  // Se não mandou usuário ou senha → erro 400 (credenciais incorretas)
   if (!usuario || !senha) {
-    return res.status(401).json({ 
+    return res.status(400).json({ 
       success: false, 
-      message: "Requisição inválida: usuário e senha são obrigatórios." 
+      message: "Usuário e senha são obrigatórios." 
     });
   }
 
-  // Se não encontrou usuário válido → erro 400 (credenciais incorretas)
+  // Se não encontrou usuário válido → erro 401 (requisição inválida)
   const user = usuarios.find(
     (u) => u.usuario === usuario && u.senha === senha
   );
 
   if (!user) {
-    return res.status(400).json({ 
+    return res.status(401).json({ 
       success: false, 
       message: "Usuário ou senha inválidos." 
     });
