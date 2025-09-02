@@ -1,69 +1,23 @@
-# React + TypeScript + Vite
+# Trabalho Prático – C01S4 (Sistemas Distribuídos)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Integrantes da Dupla
+- Arthur Gabriel Peruchi.
+- Guilherme Quaglio e Silva.
 
-Currently, two official plugins are available:
+## Objetivo
+Implementar um sistema simples com **frontend** e **backend** em **JavaScript** para consolidar os conceitos de cliente-servidor e comunicação HTTP introduzidos na aula de sistemas distribuídos.  
+O sistema possui uma tela de login que valida credenciais armazenadas em variáveis estáticas no backend, tornando a integração de um banco de dados para validação das credenciais desnecessária.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
+- **Linguagem de Programação:** JavaScript;
+- **Backend:** Node.js, Express, Cors;
+- **Frontend:** HTML, CSS, JavaScript (Fetch API);
+- **Ferramentas:** VS Code, GitHub: https://github.com/ArthurPeruchi/Trabalho-SD-C1-Dupla-ArthurGabriel-GuilhermeQuaglio;
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
+├── 🗁 backend/	# Código-fonte principal.
+├── 🗁 frontend/	# Aplicação web.
+├── 🗁 .gitignore/	# Ficheiro de configuração.
+└── 🗁 README.MD/	# Este arquivo.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Como Executar
